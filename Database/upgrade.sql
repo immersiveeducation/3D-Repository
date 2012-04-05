@@ -131,8 +131,17 @@ call AddColumnUnlessExists('3dr', 'contentobjects', 'OriginalFileId',         'v
 call AddColumnUnlessExists('3dr', 'contentobjects', 'UploadComplete',         'tinyint(1) DEFAULT NULL');
 call AddColumnUnlessExists('3dr', 'contentobjects', 'ThumbnailFileName',         'varchar(400) NOT NULL DEFAULT ""');
 call AddColumnUnlessExists('3dr', 'contentobjects', 'ThumbnailFileId',         'varchar(400) NOT NULL DEFAULT ""');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'CertificationURL',         'varchar(400) NOT NULL DEFAULT ""');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'ContributorsURL',         'varchar(400) NOT NULL DEFAULT ""');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'Copyright',         'varchar(400) NOT NULL DEFAULT ""');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'RightsHolder',         'varchar(400) NOT NULL DEFAULT ""');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'CommunityURL',         'varchar(400) NOT NULL DEFAULT ""');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'Date_Copyright',         'datetime DEFAULT "0000-00-00 00:00:00"');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'Date_Modification',         'datetime DEFAULT "0000-00-00 00:00:00"');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'Date_Certification',         'datetime DEFAULT "0000-00-00 00:00:00"');
 
-
+  
+  
 DROP TABLE IF EXISTS `current_uploads`;
 CREATE TABLE `current_uploads` (
   `pid` varchar(100) NOT NULL,
