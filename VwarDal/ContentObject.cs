@@ -204,7 +204,17 @@ namespace vwarDAL
         /// <summary>
         /// 
         /// </summary>
+
         
+        public string CertificationURL { get { return _Metadata.CertificationURL; } set { _Metadata.CertificationURL = value; } }
+        public string ContributorsURL { get { return _Metadata.ContributorsURL; } set { _Metadata.ContributorsURL = value; } }
+        public string Copyright { get { return _Metadata.Copyright; } set { _Metadata.Copyright = value; } }
+        public string RightsHolder { get { return _Metadata.RightsHolder; } set { _Metadata.RightsHolder = value; } }
+        public string CommunityURL { get { return _Metadata.CommunityURL; } set { _Metadata.CommunityURL = value; } }
+        public DateTime Date_Copyright { get { return _Metadata.Date_Copyright; } set { _Metadata.Date_Copyright = value; } }
+        public DateTime Date_Modification { get { return _Metadata.Date_Modification; } set { _Metadata.Date_Modification = value; } }
+        public DateTime Date_Certification { get { return _Metadata.Date_Certification; } set { _Metadata.Date_Certification = value; } }
+
         public ContentObject()
         {
             MissingTextures = new List<Texture>();

@@ -176,5 +176,18 @@ namespace vwarDAL
         /// 
         /// </summary>
         public int Revision { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+      
+        public string CertificationURL { get; set; }
+        public string ContributorsURL { get; set; }
+        public string Copyright { get; set; }
+        public string RightsHolder { get; set; }
+        public string CommunityURL { get; set; }
+        public DateTime Date_Copyright { get; set; }
+        public DateTime Date_Modification { get; set; }
+        public DateTime Date_Certification { get; set; }
     }
 }

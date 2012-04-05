@@ -1405,10 +1405,7 @@ DELIMITER ;
 --
 
 DROP PROCEDURE IF EXISTS `InsertContentObject`;
-
 DELIMITER $$
-
-/*!50003 SET @TEMP_SQL_MODE=@@SQL_MODE, SQL_MODE='STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION' */ $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `InsertContentObject`(newpid nvarchar(400),
 newtitle nvarchar(400),
 newcontentfilename nvarchar(400),
@@ -1443,7 +1440,14 @@ newRequireResubmit TINYINT(1),
 newenabled tinyint(1),
 newready tinyint(1),
 newOriginalFileName nvarchar(400),
-newOriginalFileId nvarchar(400))
+newOriginalFileId nvarchar(400),
+newCertificationURL nvarchar(400),
+newContributorsURL nvarchar(400),
+newCopyright nvarchar(400),
+newCommunityURL nvarchar(400),
+newDate_Copyright datetime,
+newDate_Modification datetime,
+newDate_Certification datetime)
 BEGIN
 INSERT INTO `ContentObjects` (pid,
 title,
@@ -1471,7 +1475,23 @@ unitscale,
 upaxis,
 uvcoordinatechannel,
 intentionoftexture,
-format, numpolygons,numtextures,revision, requiressubmit, enabled, uploadcomplete,OriginalFileName,OriginalFileId)
+format, 
+numpolygons,
+numtextures,
+revision, 
+requiressubmit, 
+enabled, 
+uploadcomplete,
+OriginalFileName,
+OriginalFileId,
+CertificationURL,
+ContributorsURL,
+Copyright,
+CommunityURL,
+Date_Copyright,
+Date_Modification,
+Date_Certification)
+
 values (newpid,
 newtitle,
 newcontentfilename,
@@ -1502,7 +1522,16 @@ newformat,
 newnumpolys,newNumTextures,newRevisionNumber,
 newRequireResubmit,
 newenabled,
-newready,newOriginalFileName,newOriginalFileId);
+newready,
+newOriginalFileName,
+newOriginalFileId,
+newCertificationURL,
+newContributorsURL,
+newCopyright,
+newCommunityURL,
+newDate_Copyright,
+newDate_Modification,
+newDate_Certification);
 SELECT LAST_INSERT_ID();
 END $$
 /*!50003 SET SESSION SQL_MODE=@TEMP_SQL_MODE */  $$
@@ -1948,7 +1977,15 @@ newRequireResubmit TINYINT(1),
 newenabled tinyint(1),
 newready tinyint(1),
 newOriginalFileName nvarchar(400),
-newOriginalFileId nvarchar(400))
+newOriginalFileId nvarchar(400),
+newCertificationURL nvarchar(400),
+newContributorsURL nvarchar(400),
+newCopyright nvarchar(400),
+newCommunityURL nvarchar(400),
+newDate_Copyright datetime,
+newDate_Modification datetime,
+newDate_Certification datetime
+)
 BEGIN
 UPDATE `ContentObjects`
 SET title = newtitle,
@@ -1985,7 +2022,14 @@ enabled = newenabled,
 uploadcomplete = newready,
 requiressubmit = newRequireResubmit,
 OriginalFileName = newOriginalFileName,
-OriginalFileId = newOriginalFileId
+OriginalFileId = newOriginalFileId,
+CertificationURL = newCertificationURL ,
+ContributorsURL  = newContributorsURL ,
+Copyright = newCopyright ,
+CommunityURL = newCommunityURL,
+Date_Copyright = newDate_Copyright,
+Date_Modification = newDate_Modification,
+Date_Certification = newDate_Certification
 WHERE pid=newpid AND revision = newRevisionNumber;
 SELECT ID
 FROM ContentObjects

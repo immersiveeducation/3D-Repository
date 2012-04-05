@@ -689,6 +689,20 @@ public partial class Users_Upload : Website.Pages.PageBase
             }
             tempCO.Enabled = true;
             tempCO.UploadedDate = DateTime.Now;
+            
+            /////////////////////////////////////////
+            //TO DO: Real Cert Time
+            tempCO.Date_Certification = DateTime.Now;
+            tempCO.Date_Copyright = DateTime.Now;
+            tempCO.Date_Modification = DateTime.Now;
+
+            /////////////////////////////////////////
+            //TO DO: Real data
+            tempCO.CommunityURL = "www.immersiveeducation.org/Community";
+            tempCO.ContributorsURL = "www.immersiveeducation.org/Contributor";
+            tempCO.CertificationURL = "www.immersiveeducation.org/Certification";
+            tempCO.Copyright = "All rights Reserved";
+            tempCO.RightsHolder = "Rights holder test";
 
             dal.UpdateContentObject(tempCO);
             UploadReset(status.hashname);

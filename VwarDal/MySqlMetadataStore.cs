@@ -185,7 +185,7 @@ namespace vwarDAL
                 int id = 0;
                 using (var command = conn.CreateCommand())
                 {
-                    command.CommandText = "{CALL UpdateContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
+                    command.CommandText = "{CALL UpdateContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     var properties = co.GetType().GetProperties();
                     foreach (var prop in properties)
@@ -673,7 +673,7 @@ namespace vwarDAL
                 
                 using (var command = conn.CreateCommand())
                 {
-                    command.CommandText = "{CALL InsertContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
+                    command.CommandText = "{CALL InsertContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     var properties = co.GetType().GetProperties();
                     foreach (var prop in properties)
@@ -789,6 +789,24 @@ namespace vwarDAL
                 co.OriginalFileName = resultSet["OriginalFileName"].ToString();
                 co.OriginalFileId = resultSet["OriginalFileId"].ToString();
 
+                co.CertificationURL = resultSet["CertificationURL"].ToString();
+                co.ContributorsURL = resultSet["ContributorsURL"].ToString();
+                co.Copyright = resultSet["Copyright"].ToString();
+                co.RightsHolder = resultSet["RightsHolder"].ToString();
+                co.CommunityURL = resultSet["CommunityURL"].ToString();
+
+                if (DateTime.TryParse(resultSet["Date_Copyright"].ToString(), out temp))
+                {
+                    co.Date_Copyright = temp;
+                }
+                if (DateTime.TryParse(resultSet["Date_Modification"].ToString(), out temp))
+                {
+                    co.Date_Modification = temp;
+                }
+                if (DateTime.TryParse(resultSet["Date_Certification"].ToString(), out temp))
+                {
+                    co.Date_Certification = temp;
+                }
             }
             catch
             {
@@ -928,6 +946,13 @@ namespace vwarDAL
             command.Parameters.AddWithValue("newready", co.Ready);
             command.Parameters.AddWithValue("newOriginalFileName", co.OriginalFileName);
             command.Parameters.AddWithValue("newOriginalFileId", co.OriginalFileId);
+            command.Parameters.AddWithValue("newCertificationURL", co.CertificationURL);
+            command.Parameters.AddWithValue("newContributorsURL", co.ContributorsURL);
+            command.Parameters.AddWithValue("newCopyright", co.Copyright);
+            command.Parameters.AddWithValue("newCommunityURL", co.CommunityURL);
+            command.Parameters.AddWithValue("newDate_Copyright", co.Date_Copyright);
+            command.Parameters.AddWithValue("newDate_Modification", co.Date_Modification);
+            command.Parameters.AddWithValue("newDate_Certification", co.Date_Certification);
         }
         /// <summary>
         /// 
