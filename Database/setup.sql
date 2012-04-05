@@ -1769,7 +1769,8 @@ newCopyright nvarchar(400),
 newCommunityURL nvarchar(400),
 newDate_Copyright datetime,
 newDate_Modification datetime,
-newDate_Certification datetime)
+newDate_Certification datetime,
+newRightsHolder  nvarchar(400))
 BEGIN
 INSERT INTO `ContentObjects` (pid,
 title,
@@ -1812,7 +1813,8 @@ Copyright,
 CommunityURL,
 Date_Copyright,
 Date_Modification,
-Date_Certification)
+Date_Certification,
+RightsHolder)
 
 values (newpid,
 newtitle,
@@ -1853,7 +1855,8 @@ newCopyright,
 newCommunityURL,
 newDate_Copyright,
 newDate_Modification,
-newDate_Certification);
+newDate_Certification,
+newRightsHolder);
 SELECT LAST_INSERT_ID();
 END $$
 /*!50003 SET SESSION SQL_MODE=@TEMP_SQL_MODE */  $$
@@ -2306,7 +2309,8 @@ newCopyright nvarchar(400),
 newCommunityURL nvarchar(400),
 newDate_Copyright datetime,
 newDate_Modification datetime,
-newDate_Certification datetime
+newDate_Certification datetime,
+newRightsHolder nvarchar(400)
 )
 BEGIN
 UPDATE `ContentObjects`
@@ -2351,7 +2355,8 @@ Copyright = newCopyright ,
 CommunityURL = newCommunityURL,
 Date_Copyright = newDate_Copyright,
 Date_Modification = newDate_Modification,
-Date_Certification = newDate_Certification
+Date_Certification = newDate_Certification,
+RightsHolder = newRightsHolder
 WHERE pid=newpid AND revision = newRevisionNumber;
 SELECT ID
 FROM ContentObjects
