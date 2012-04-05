@@ -26,3 +26,10 @@ C:\Development\adlnet.GitHub.com\3D-Repository\LearningRegistry\bin\Debug\vwarDA
 C:\Development\adlnet.GitHub.com\3D-Repository\LearningRegistry\obj\Debug\ResolveAssemblyReference.cache
 C:\Development\adlnet.GitHub.com\3D-Repository\LearningRegistry\obj\Debug\LearningRegistry.dll
 C:\Development\adlnet.GitHub.com\3D-Repository\LearningRegistry\obj\Debug\LearningRegistry.pdb
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\LearningRegistry\bin\Debug\LearningRegistry.dll
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\LearningRegistry\bin\Debug\LearningRegistry.pdb
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\LearningRegistry\bin\Debug\vwarDAL.dll
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\LearningRegistry\bin\Debug\vwarDAL.pdb
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\LearningRegistry\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\LearningRegistry\obj\Debug\LearningRegistry.dll
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\LearningRegistry\obj\Debug\LearningRegistry.pdb

@@ -1,0 +1,7 @@
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\OrbitOne.OpenId.MembershipProvider\bin\Debug\OrbitOne.OpenId.MembershipProvider.dll
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\OrbitOne.OpenId.MembershipProvider\bin\Debug\OrbitOne.OpenId.MembershipProvider.pdb
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\OrbitOne.OpenId.MembershipProvider\bin\Debug\vwarDAL.dll
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\OrbitOne.OpenId.MembershipProvider\bin\Debug\vwarDAL.pdb
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\OrbitOne.OpenId.MembershipProvider\obj\Debug\ResolveAssemblyReference.cache
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\OrbitOne.OpenId.MembershipProvider\obj\Debug\OrbitOne.OpenId.MembershipProvider.dll
+C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\OrbitOne.OpenId.MembershipProvider\obj\Debug\OrbitOne.OpenId.MembershipProvider.pdb

@@ -88,6 +88,14 @@ CREATE TABLE `contentobjects` (
   `UploadComplete` tinyint(1) DEFAULT NULL,
   `ThumbnailFileName` varchar(400) NOT NULL DEFAULT '',
   `ThumbnailFileId` varchar(400) NOT NULL DEFAULT '',
+  `CertificationURL` varchar(400) NOT NULL DEFAULT '',
+  `ContributorsURL` varchar(400) NOT NULL DEFAULT '',
+  `Copyright` varchar(400) NOT NULL DEFAULT '',
+  `RightsHolder` varchar(400) NOT NULL DEFAULT '',
+  `CommunityURL` varchar(400) NOT NULL DEFAULT '',
+  `Date_Copyright` datetime DEFAULT '0000-00-00 00:00:00',
+  `Date_Modification` datetime DEFAULT '0000-00-00 00:00:00',
+  `Date_Certification` datetime DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`ID`),
   KEY `FK_contentobjects_1` (`Submitter`)
 ) ENGINE=InnoDB AUTO_INCREMENT=404 DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;

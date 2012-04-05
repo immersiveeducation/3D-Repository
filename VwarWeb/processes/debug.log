@@ -152,3 +152,8 @@
 [0227/095926:INFO:collada.cc(302)] Loading Collada model "/70m_rev_e.dae" from zip file "C:\Development\adlnet.GitHub.com\3D-Repository\VwarWeb\App_Data\viewerTemp\f91b82b80e737b3b135b691f936654ceb1af824a27.zip"
 [0227/095927:INFO:pack.cc(128)] CreateTextureFromFile(uri='antenna.png', filename='C:\Windows\TEMP\e67f4021-5b18-4c20-ae95-480b9d6e7f2f.png')
 [0227/095927:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Windows\TEMP\e67f4021-5b18-4c20-ae95-480b9d6e7f2f.png
+[0405/160018:INFO:collada.cc(302)] Loading Collada model "/TunaBoat.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\67544e38d6da06a4c72de8ad62097991ee392ef89.zip"
+[0405/160018:INFO:pack.cc(128)] CreateTextureFromFile(uri='tunaboat .png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\c33fe9df-d016-4097-bb47-c7f987123a13.png')
+[0405/160018:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\c33fe9df-d016-4097-bb47-c7f987123a13.png
+[0405/160018:INFO:pack.cc(128)] CreateTextureFromFile(uri='tunadeck.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\0ef7b4de-0d1d-4d87-8fa8-88a582feac40.png')
+[0405/160018:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\0ef7b4de-0d1d-4d87-8fa8-88a582feac40.png
