@@ -175,3 +175,10 @@
 [0405/163820:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\846a07b8-09df-451e-9318-f5ba369e6401.png
 [0405/163820:INFO:pack.cc(128)] CreateTextureFromFile(uri='tunadeck.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\c4551acd-7298-4c8b-9e4a-ccd1a70c01e8.png')
 [0405/163820:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\c4551acd-7298-4c8b-9e4a-ccd1a70c01e8.png
+[0405/165931:INFO:collada.cc(302)] Loading Collada model "/NetTrawler.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\69339879b877207f5d183699456bd50243deaeb861.zip"
+[0405/165931:INFO:pack.cc(128)] CreateTextureFromFile(uri='nettrawler.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\577a8251-f646-4ed6-9a1f-0c499c408c9e.png')
+[0405/165931:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\577a8251-f646-4ed6-9a1f-0c499c408c9e.png
+[0405/165931:INFO:pack.cc(128)] CreateTextureFromFile(uri='ladder.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\8c031a3f-bdcf-45d2-acf2-2e3269e9ba15.png')
+[0405/165931:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\8c031a3f-bdcf-45d2-acf2-2e3269e9ba15.png
+[0405/165931:INFO:pack.cc(128)] CreateTextureFromFile(uri='nettrawler_extras.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\11ee5e2d-783a-41d3-82b9-e1bb412ecced.png')
+[0405/165931:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\11ee5e2d-783a-41d3-82b9-e1bb412ecced.png

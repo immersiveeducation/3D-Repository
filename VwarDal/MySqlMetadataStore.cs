@@ -185,7 +185,7 @@ namespace vwarDAL
                 int id = 0;
                 using (var command = conn.CreateCommand())
                 {
-                    command.CommandText = "{CALL UpdateContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
+                    command.CommandText = "{CALL UpdateContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     var properties = co.GetType().GetProperties();
                     foreach (var prop in properties)
@@ -673,7 +673,7 @@ namespace vwarDAL
                 
                 using (var command = conn.CreateCommand())
                 {
-                    command.CommandText = "{CALL InsertContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
+                    command.CommandText = "{CALL InsertContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     var properties = co.GetType().GetProperties();
                     foreach (var prop in properties)
@@ -953,6 +953,7 @@ namespace vwarDAL
             command.Parameters.AddWithValue("newDate_Copyright", co.Date_Copyright);
             command.Parameters.AddWithValue("newDate_Modification", co.Date_Modification);
             command.Parameters.AddWithValue("newDate_Certification", co.Date_Certification);
+            command.Parameters.AddWithValue("newRightsHolder", co.RightsHolder);
         }
         /// <summary>
         /// 

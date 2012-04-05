@@ -186,6 +186,19 @@ public partial class Public_Model : Website.Pages.PageBase
         {
             if (LR_3DR_Bridge.LR_Integration_Enabled())
                 LR_3DR_Bridge.ModelViewed(co);
+
+            Community_URL.Text = co.CommunityURL;
+            Community_URL.NavigateUrl = co.CommunityURL;
+            Certification_URL.Text = co.CertificationURL;
+            Certification_URL.NavigateUrl = co.CertificationURL;
+            Contributor_URL.Text = co.ContributorsURL;
+            Contributor_URL.NavigateUrl = co.ContributorsURL;
+            Copyright.Text = co.Copyright;
+            Rights_Holder.Text = co.RightsHolder;
+            Certification_Date.Text = co.Date_Certification.ToString();
+            Copyright_Date.Text = co.Date_Copyright.ToString();
+            Modification_Date.Text = co.Date_Modification.ToString();
+
             DownloadButton.Enabled = Permission >= ModelPermissionLevel.Fetchable;
             DownloadButton.Visible = Permission >= ModelPermissionLevel.Fetchable;
             if ("Model".Equals(co.AssetType, StringComparison.InvariantCultureIgnoreCase) || true)

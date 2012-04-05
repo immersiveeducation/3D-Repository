@@ -150,6 +150,50 @@
                             </td>
                         </tr>
                         <tr>
+                            <td id="IED_Data" runat="server">
+                                <div class="ListTitle">
+                                    <div>
+                                        IED Metadata</div>
+                                </div>
+                                <table border="0" style="margin-left: 5px;">
+                                    <tr runat="server" id="Tr2">
+                                        <td>
+                                            Community URL:
+                                            <asp:HyperLink ID="Community_URL" runat="server" />
+                                        </td></tr>
+                                        <tr runat="server" id="Tr1"><td>
+                                            Certification URL:
+                                            <asp:HyperLink ID="Certification_URL" runat="server" />
+                                        </td></tr>
+                                        <tr runat="server" id="Tr3"><td>
+                                            Contributor URL:
+                                            <asp:HyperLink ID="Contributor_URL" runat="server" />
+                                        </td></tr>
+                                        <tr runat="server" id="Tr4"><td>
+                                            Copyright:
+                                            <asp:Label ID="Copyright" runat="server" />
+                                        </td></tr>
+                                        <tr runat="server" id="Tr5"><td>
+                                            Rights Holder:
+                                            <asp:Label ID="Rights_Holder" runat="server" />
+                                        </td></tr>
+                                        <tr runat="server" id="Tr6"><td>
+                                            Certification Date:
+                                            <asp:Label ID="Certification_Date" runat="server" />
+                                        </td></tr>
+                                        <tr runat="server" id="Tr7"><td>
+                                            Copyright Date:
+                                            <asp:Label ID="Copyright_Date" runat="server" />
+                                        </td></tr>
+                                        <tr runat="server" id="Tr8"><td>
+                                            Modification Date:
+                                            <asp:Label ID="Modification_Date" runat="server" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
                             <td id="DeveloperInfoSection" runat="server">
                                 <div class="ListTitle">
                                     <div>
