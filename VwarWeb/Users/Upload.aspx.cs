@@ -297,6 +297,8 @@ public partial class Users_Upload : Website.Pages.PageBase
                 HttpContext.Current.Session["contentTextures"] = model.textureFiles;
                 HttpContext.Current.Session["contentMissingTextures"] = model.missingTextures;
 
+                HttpContext.Current.Session["metadata"] = model.JSONdata;
+
                 Utility_3D.Parser.ModelData mdata = model._ModelData;
                 tempFedoraObject.NumPolygons = mdata.VertexCount.Polys;
                 tempFedoraObject.NumTextures = mdata.ReferencedTextures.Length;
@@ -698,11 +700,47 @@ public partial class Users_Upload : Website.Pages.PageBase
 
             /////////////////////////////////////////
             //TO DO: Real data
-            tempCO.CommunityURL = "www.immersiveeducation.org/Community";
-            tempCO.ContributorsURL = "www.immersiveeducation.org/Contributor";
-            tempCO.CertificationURL = "www.immersiveeducation.org/Certification";
-            tempCO.Copyright = "All rights Reserved";
-            tempCO.RightsHolder = "Rights holder test";
+            tempCO.CommunityURL = "";
+            tempCO.ContributorsURL = "";
+            tempCO.CertificationURL = "";
+            tempCO.Copyright = "";
+            tempCO.RightsHolder = "";
+
+            Dictionary<String, Object> metadataroot = HttpContext.Current.Session["metadata"] as Dictionary<String, Object>;
+            Dictionary<String, Object> metadata = metadataroot["metadata"] as Dictionary<String, Object>;
+            if (metadata.ContainsKey("COMMUNITY"))
+                tempCO.CommunityURL = metadata["COMMUNITY"].ToString();
+
+            if (metadata.ContainsKey("CONTRIBUTORS"))
+                tempCO.CommunityURL = metadata["CONTRIBUTORS"].ToString();
+
+            if (metadata.ContainsKey("CERTIFICATION"))
+                tempCO.CertificationURL = metadata["CERTIFICATION"].ToString();
+
+            if (metadata.ContainsKey("COPYRIGHT"))
+                tempCO.Copyright = metadata["COPYRIGHT"].ToString();
+
+            if (metadata.ContainsKey("RIGHTSHOLDER"))
+                tempCO.RightsHolder = metadata["RIGHTSHOLDER"].ToString();
+
+            DateTime tempdate;
+            if (metadata.ContainsKey("DATE_COPYRIGHT"))
+            {
+                DateTime.TryParse(metadata["DATE_COPYRIGHT"].ToString(), out tempdate);
+                tempCO.Date_Copyright = tempdate;
+            }
+
+            if (metadata.ContainsKey("DATE_CERTIFICATION"))
+            {
+                DateTime.TryParse(metadata["DATE_CERTIFICATION"].ToString(), out tempdate);
+                tempCO.Date_Certification = tempdate;
+            }
+
+            if (metadata.ContainsKey("DATE_MODIFICATION"))
+            {
+                DateTime.TryParse(metadata["DATE_MODIFICATION"].ToString(), out tempdate);
+                tempCO.Date_Modification = tempdate;
+            }
 
             dal.UpdateContentObject(tempCO);
             UploadReset(status.hashname);
