@@ -184,3 +184,104 @@
 [0405/165931:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\11ee5e2d-783a-41d3-82b9-e1bb412ecced.png
 [0409/130925:INFO:collada.cc(302)] Loading Collada model "/CONFIDENTIAL_iED_LVM_CRAB_attack_baked.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\f3583d648ccad5394ce5c9790f88c64da96ddb1f95.zip"
 [0409/131125:INFO:collada.cc(302)] Loading Collada model "/CONFIDENTIAL_iED_LVM_CRAB_attack_baked.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\f3583d648ccad5394ce5c9790f88c64da96ddb1f20.zip"
+[0411/114157:INFO:collada.cc(302)] Loading Collada model "/skiffs.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\2c12da990e61b2203f511f816c2bcde893ddd72695.zip"
+[0411/114157:INFO:pack.cc(128)] CreateTextureFromFile(uri='24ft_skiff.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\7b7337e9-35cd-4da0-bcbd-5e3ba21cf4ef.png')
+[0411/114157:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\7b7337e9-35cd-4da0-bcbd-5e3ba21cf4ef.png
+[0411/114157:INFO:pack.cc(128)] CreateTextureFromFile(uri='outboard.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\92e04ed3-df80-440b-a80d-1830c17274ea.png')
+[0411/114157:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\92e04ed3-df80-440b-a80d-1830c17274ea.png
+[0411/114157:INFO:pack.cc(128)] CreateTextureFromFile(uri='emerencyjug.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\3d4720d7-e509-4583-8331-030edd2d9c07.png')
+[0411/114157:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\3d4720d7-e509-4583-8331-030edd2d9c07.png
+[0411/114157:INFO:pack.cc(128)] CreateTextureFromFile(uri='ladder.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\73700ac7-be5c-4814-9c9f-39a581ee7764.png')
+[0411/114157:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\73700ac7-be5c-4814-9c9f-39a581ee7764.png
+[0411/114157:INFO:pack.cc(128)] CreateTextureFromFile(uri='long_skiff.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\4808e0e9-2121-4609-82b9-257e1450eadd.png')
+[0411/114157:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\4808e0e9-2121-4609-82b9-257e1450eadd.png
+[0411/114157:INFO:pack.cc(128)] CreateTextureFromFile(uri='oldmercmotor.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\896338e0-5121-4490-ad5e-5ef701529ced.png')
+[0411/114157:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\896338e0-5121-4490-ad5e-5ef701529ced.png
+[0411/114328:INFO:collada.cc(302)] Loading Collada model "/skiffs.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\2c12da990e61b2203f511f816c2bcde893ddd72690.zip"
+[0411/114328:INFO:pack.cc(128)] CreateTextureFromFile(uri='24ft__0.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\aa4d364d-91b6-4872-8941-bbc282f3c73a.png')
+[0411/114328:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\aa4d364d-91b6-4872-8941-bbc282f3c73a.png
+[0411/114328:INFO:pack.cc(128)] CreateTextureFromFile(uri='outboard.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\ef2c9291-454a-48cd-a69c-3581298db117.png')
+[0411/114328:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\ef2c9291-454a-48cd-a69c-3581298db117.png
+[0411/114328:INFO:pack.cc(128)] CreateTextureFromFile(uri='emere_2.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\fc03ecbc-2962-4249-8f6d-ac3a9c22124d.png')
+[0411/114328:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\fc03ecbc-2962-4249-8f6d-ac3a9c22124d.png
+[0411/114328:INFO:pack.cc(128)] CreateTextureFromFile(uri='ladder.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\0d9f3962-a971-4abf-a536-062ca3a92eaa.png')
+[0411/114328:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\0d9f3962-a971-4abf-a536-062ca3a92eaa.png
+[0411/114328:INFO:pack.cc(128)] CreateTextureFromFile(uri='long__4.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\40140ffa-17bb-4bba-8058-94ee31d02d44.png')
+[0411/114328:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\40140ffa-17bb-4bba-8058-94ee31d02d44.png
+[0411/114328:INFO:pack.cc(128)] CreateTextureFromFile(uri='oldme_5.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\21922141-9561-4e68-ab39-bd4d062dd4ad.png')
+[0411/114328:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\21922141-9561-4e68-ab39-bd4d062dd4ad.png
+[0411/115122:INFO:collada.cc(302)] Loading Collada model "/TunaBoat.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\67544e38d6da06a4c72de8ad62097991ee392ef819.zip"
+[0411/115122:INFO:pack.cc(128)] CreateTextureFromFile(uri='tunab_0.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\04eb142f-24a8-472b-88ed-af9c902e3bee.png')
+[0411/115122:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\04eb142f-24a8-472b-88ed-af9c902e3bee.png
+[0411/115122:INFO:pack.cc(128)] CreateTextureFromFile(uri='tunadeck.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\41658aac-a996-42b6-a75a-f01aeaa74627.png')
+[0411/115122:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\41658aac-a996-42b6-a75a-f01aeaa74627.png
+[0411/115938:INFO:collada.cc(302)] Loading Collada model "/skiffs.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\2c12da990e61b2203f511f816c2bcde893ddd72682.zip"
+[0411/115938:INFO:pack.cc(128)] CreateTextureFromFile(uri='24ft_skiff.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\5a56014b-0b59-49bb-aecc-509fda92f0f5.png')
+[0411/115938:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\5a56014b-0b59-49bb-aecc-509fda92f0f5.png
+[0411/115938:INFO:pack.cc(128)] CreateTextureFromFile(uri='outboard.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\1d22197e-9850-43d9-ac2d-967cbe5896f5.png')
+[0411/115938:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\1d22197e-9850-43d9-ac2d-967cbe5896f5.png
+[0411/115938:INFO:pack.cc(128)] CreateTextureFromFile(uri='emerencyjug.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\97e660db-4b2e-416f-a4e5-d09e3de8125d.png')
+[0411/115938:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\97e660db-4b2e-416f-a4e5-d09e3de8125d.png
+[0411/115938:INFO:pack.cc(128)] CreateTextureFromFile(uri='ladder.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\2c021083-110a-4e2b-9230-03fbd7ba9041.png')
+[0411/115938:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\2c021083-110a-4e2b-9230-03fbd7ba9041.png
+[0411/115938:INFO:pack.cc(128)] CreateTextureFromFile(uri='long_skiff.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\3add34e3-f479-4dac-a1de-003abd82935d.png')
+[0411/115938:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\3add34e3-f479-4dac-a1de-003abd82935d.png
+[0411/115938:INFO:pack.cc(128)] CreateTextureFromFile(uri='oldmercmotor.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\aefb108a-9930-4eb0-ac78-10cc46f0ec3e.png')
+[0411/115938:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\aefb108a-9930-4eb0-ac78-10cc46f0ec3e.png
+[0501/160154:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb87.zip"
+[0501/160154:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\11cd4cc0-9864-4fff-915a-4a01a54d906a.png')
+[0501/160154:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\11cd4cc0-9864-4fff-915a-4a01a54d906a.png
+[0501/160309:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb35.zip"
+[0501/160309:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\7392c4c7-a7bf-4867-b378-54ff829a9d42.png')
+[0501/160309:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\7392c4c7-a7bf-4867-b378-54ff829a9d42.png
+[0501/160531:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb75.zip"
+[0501/160531:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\33fdac01-d238-4190-a1cd-0d45a0eba08e.png')
+[0501/160531:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\33fdac01-d238-4190-a1cd-0d45a0eba08e.png
+[0501/160821:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb0.zip"
+[0501/160821:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\9329514a-5876-42e8-8eb2-d768cad797ea.png')
+[0501/160821:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\9329514a-5876-42e8-8eb2-d768cad797ea.png
+[0501/162353:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb86.zip"
+[0501/162353:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\c82b11f6-c179-40e1-b2f5-f67f8dad0ad5.png')
+[0501/162353:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\c82b11f6-c179-40e1-b2f5-f67f8dad0ad5.png
+[0501/163150:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb62.zip"
+[0501/163150:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\50a327a3-c2fd-48b7-a357-24042ea61d8e.png')
+[0501/163150:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\50a327a3-c2fd-48b7-a357-24042ea61d8e.png
+[0501/163208:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb43.zip"
+[0501/163208:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\f07f19d1-cbc5-4288-a9ab-83f1215ffe79.png')
+[0501/163208:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\f07f19d1-cbc5-4288-a9ab-83f1215ffe79.png
+[0501/163218:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb32.zip"
+[0501/163218:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\0655c94b-1e2c-4d1f-b915-e4d31fe7a77d.png')
+[0501/163218:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\0655c94b-1e2c-4d1f-b915-e4d31fe7a77d.png
+[0501/163445:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb17.zip"
+[0501/163445:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\1c960b94-1f14-4f14-9f7e-01c97a184f81.png')
+[0501/163445:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\1c960b94-1f14-4f14-9f7e-01c97a184f81.png
+[0501/163553:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb51.zip"
+[0501/163553:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\b66e470b-e410-4251-b574-d03f54db7255.png')
+[0501/163553:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\b66e470b-e410-4251-b574-d03f54db7255.png
+[0501/164102:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb79.zip"
+[0501/164102:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\5940d532-6d6c-4b36-9b46-7a03e8e0186c.png')
+[0501/164102:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\5940d532-6d6c-4b36-9b46-7a03e8e0186c.png
+[0501/164128:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb96.zip"
+[0501/164128:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\f20da48b-3905-4f9b-8051-2015eec18d29.png')
+[0501/164128:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\f20da48b-3905-4f9b-8051-2015eec18d29.png
+[0501/164234:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb84.zip"
+[0501/164234:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\a9d15ac1-dcb0-4c5c-a459-4a10acdbef9f.png')
+[0501/164234:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\a9d15ac1-dcb0-4c5c-a459-4a10acdbef9f.png
+[0501/164435:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb91.zip"
+[0501/164435:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\024e4e7c-a2d9-4e7a-bd21-e8e78ae7e0d9.png')
+[0501/164435:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\024e4e7c-a2d9-4e7a-bd21-e8e78ae7e0d9.png
+[0501/165004:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb75.zip"
+[0501/165004:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\b74e4176-f146-4f35-b5e3-5ce79e14bc57.png')
+[0501/165004:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\b74e4176-f146-4f35-b5e3-5ce79e14bc57.png
+[0501/165059:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb68.zip"
+[0501/165059:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\de075d6d-e9c4-4a99-b0c4-2f229aff95b6.png')
+[0501/165059:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\de075d6d-e9c4-4a99-b0c4-2f229aff95b6.png
+[0501/165158:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb71.zip"
+[0501/165158:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\7b9686ec-1ce1-4e74-a9ce-cf809b9e45f2.png')
+[0501/165158:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\7b9686ec-1ce1-4e74-a9ce-cf809b9e45f2.png
+[0501/165341:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb87.zip"
+[0501/165341:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\f730a953-baaa-443f-a82c-b4c0e16bd541.png')
+[0501/165341:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\f730a953-baaa-443f-a82c-b4c0e16bd541.png
+[0501/165955:INFO:collada.cc(302)] Loading Collada model "/Earth_iED_METADATA_EXAMPLE.dae" from zip file "C:\Development\ied.GitHub.com\3D-Repository\3D-Repository\VwarWeb\App_Data\viewerTemp\cddf5e274f2d6a94f786a974811a0aaa68c4eccb73.zip"
+[0501/165955:INFO:pack.cc(128)] CreateTextureFromFile(uri='texture.png', filename='C:\Users\CHADWI~1\AppData\Local\Temp\49032f1d-e02c-4341-879f-69085e29f9e1.png')
+[0501/165955:INFO:image_utils.cc(849)] Bitmap Found a PNG file : C:\Users\CHADWI~1\AppData\Local\Temp\49032f1d-e02c-4341-879f-69085e29f9e1.png

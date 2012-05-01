@@ -153,7 +153,8 @@ public partial class Public_Model : Website.Pages.PageBase
             Page.Header.Controls.Add(newLink);
         }
     }
-
+    private static int max(int x, int y) { return x > y ? x : y; }
+    private static int min(int x, int y) { return x < y ? x : y; }
     private void BindModelDetails()
     {
         
@@ -187,11 +188,11 @@ public partial class Public_Model : Website.Pages.PageBase
             if (LR_3DR_Bridge.LR_Integration_Enabled())
                 LR_3DR_Bridge.ModelViewed(co);
 
-            Community_URL.Text = co.CommunityURL;
+            Community_URL.Text = co.CommunityURL.Substring(0,min(50,co.CommunityURL.Length)) + "...";
             Community_URL.NavigateUrl = co.CommunityURL;
-            Certification_URL.Text = co.CertificationURL;
+            Certification_URL.Text = co.CertificationURL.Substring(0, min(50, co.CertificationURL.Length)) + "...";
             Certification_URL.NavigateUrl = co.CertificationURL;
-            Contributor_URL.Text = co.ContributorsURL;
+            Contributor_URL.Text = co.ContributorsURL.Substring(0, min(50, co.ContributorsURL.Length)) + "...";
             Contributor_URL.NavigateUrl = co.ContributorsURL;
             Copyright.Text = co.Copyright;
             Rights_Holder.Text = co.RightsHolder;

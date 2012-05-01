@@ -278,6 +278,7 @@ public partial class Users_Upload : Website.Pages.PageBase
         Utility_3D.ConverterOptions cOptions = new Utility_3D.ConverterOptions();
         cOptions.EnableTextureConversion(Utility_3D.ConverterOptions.PNG);
         cOptions.EnableScaleTextures(Website.Config.MaxTextureDimension);
+        cOptions.EnableMetadataGathering();
 
         FileStatus status = (FileStatus)HttpContext.Current.Session["fileStatus"];
 
@@ -567,6 +568,23 @@ public partial class Users_Upload : Website.Pages.PageBase
         return jsReturnParams;
     }
 
+    private static string ArrayOrStringToString(object arr)
+    {
+        string res = "";
+        ArrayList array = (ArrayList)arr;
+        if (array != null)
+        {
+            foreach (object o in array)
+                res += o.ToString() +", ";
+
+            res = res.Substring(0, res.Length - 2);
+        }
+        else
+        {
+            res = arr.ToString();
+        }
+        return res;
+    }
     
     /// <summary>
     /// Binds the details from step 3 to the content object, sends it to Fedora, then adds the model and image datastreams.
@@ -707,41 +725,56 @@ public partial class Users_Upload : Website.Pages.PageBase
             tempCO.RightsHolder = "";
 
             Dictionary<String, Object> metadataroot = HttpContext.Current.Session["metadata"] as Dictionary<String, Object>;
-            Dictionary<String, Object> metadata = metadataroot["metadata"] as Dictionary<String, Object>;
-            if (metadata.ContainsKey("COMMUNITY"))
-                tempCO.CommunityURL = metadata["COMMUNITY"].ToString();
-
-            if (metadata.ContainsKey("CONTRIBUTORS"))
-                tempCO.CommunityURL = metadata["CONTRIBUTORS"].ToString();
-
-            if (metadata.ContainsKey("CERTIFICATION"))
-                tempCO.CertificationURL = metadata["CERTIFICATION"].ToString();
-
-            if (metadata.ContainsKey("COPYRIGHT"))
-                tempCO.Copyright = metadata["COPYRIGHT"].ToString();
-
-            if (metadata.ContainsKey("RIGHTSHOLDER"))
-                tempCO.RightsHolder = metadata["RIGHTSHOLDER"].ToString();
-
-            DateTime tempdate;
-            if (metadata.ContainsKey("DATE_COPYRIGHT"))
+            if (metadataroot != null)
             {
-                DateTime.TryParse(metadata["DATE_COPYRIGHT"].ToString(), out tempdate);
-                tempCO.Date_Copyright = tempdate;
-            }
+                Dictionary<String, Object> metadata = metadataroot["ImmersiveEducationInitiative"] as Dictionary<String, Object>;
+                if (metadata != null)
+                {
+                   
+                    if (metadata.ContainsKey("COMMUNITY"))
+                        tempCO.CommunityURL = metadata["COMMUNITY"].ToString();
 
-            if (metadata.ContainsKey("DATE_CERTIFICATION"))
-            {
-                DateTime.TryParse(metadata["DATE_CERTIFICATION"].ToString(), out tempdate);
-                tempCO.Date_Certification = tempdate;
-            }
+                    if (metadata.ContainsKey("CONTRIBUTORS"))
+                        tempCO.ContributorsURL = metadata["CONTRIBUTORS"].ToString();
 
-            if (metadata.ContainsKey("DATE_MODIFICATION"))
-            {
-                DateTime.TryParse(metadata["DATE_MODIFICATION"].ToString(), out tempdate);
-                tempCO.Date_Modification = tempdate;
-            }
+                    if (metadata.ContainsKey("CERTIFICATION"))
+                        tempCO.CertificationURL = metadata["CERTIFICATION"].ToString();
 
+                    if (metadata.ContainsKey("COPYRIGHT"))
+                        tempCO.Copyright = metadata["COPYRIGHT"].ToString();
+
+                    if (metadata.ContainsKey("RIGHTSHOLDER"))
+                        tempCO.RightsHolder = metadata["RIGHTSHOLDER"].ToString();
+
+                    DateTime tempdate;
+                    if (metadata.ContainsKey("DATE_COPYRIGHT"))
+                    {
+                        DateTime.TryParse(metadata["DATE_COPYRIGHT"].ToString(), out tempdate);
+                        tempCO.Date_Copyright = tempdate;
+                    }
+
+                    if (metadata.ContainsKey("DATE_CERTIFICATION"))
+                    {
+                        DateTime.TryParse(metadata["DATE_CERTIFICATION"].ToString(), out tempdate);
+                        tempCO.Date_Certification = tempdate;
+                    }
+
+                    if (metadata.ContainsKey("DATE_MODIFICATION"))
+                    {
+                        DateTime.TryParse(metadata["DATE_MODIFICATION"].ToString(), out tempdate);
+                        tempCO.Date_Modification = tempdate;
+                    }
+                    if (metadata.ContainsKey("ARTIST"))
+                    {
+                        tempCO.ArtistName = ArrayOrStringToString(metadata["ARTIST"]);
+                    }
+                    if (metadata.ContainsKey("CREATOR"))
+                    {
+                        tempCO.DeveloperName = ArrayOrStringToString(metadata["CREATOR"]);
+                    }
+
+                }
+            }
             dal.UpdateContentObject(tempCO);
             UploadReset(status.hashname);
 
