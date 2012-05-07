@@ -35,6 +35,7 @@ using Utils;
 using System.ComponentModel;
 using System.Collections.Generic;
 using LR;
+using System.Security.Cryptography;
 
 /// <summary>
 /// 
@@ -260,6 +261,27 @@ public partial class Users_Upload : Website.Pages.PageBase
         fs.Close();
         return new FileStatus("asdf", "asdf");
     }
+
+
+    private static string Base64EncodeHash(Stream ms)
+    {
+        ms.Seek(0, SeekOrigin.Begin);
+        byte[] result;
+        HMACSHA1 shaM = new HMACSHA1();
+        shaM.Key = new byte[1];
+
+
+        shaM.Initialize();
+
+        result = shaM.ComputeHash(ms);
+
+
+        string hash = System.Convert.ToBase64String(result);
+        return hash;
+
+
+    }
+
     /// <summary>
     /// Sends the uploaded file through the conversion process and stores the temporary files in the App_Data folder. 
     /// Also updates the temporary content object and FileStatus for the session.
@@ -298,8 +320,16 @@ public partial class Users_Upload : Website.Pages.PageBase
                 HttpContext.Current.Session["contentTextures"] = model.textureFiles;
                 HttpContext.Current.Session["contentMissingTextures"] = model.missingTextures;
 
-                HttpContext.Current.Session["metadata"] = model.JSONdata;
+                
+                
+                Dictionary<String, Object> metadataroot = model.JSONdata;
+                
+                if (!metadataroot.ContainsKey("ImmersiveEducationInitiative"))
+                    metadataroot["ImmersiveEducationInitiative"] = GetMetadataFromArchive(stream);
 
+                HttpContext.Current.Session["metadata"] = metadataroot;
+                status.Metadata = metadataroot;
+                status.Metadata["SHA1Hash"] = Base64EncodeHash(stream);
                 Utility_3D.Parser.ModelData mdata = model._ModelData;
                 tempFedoraObject.NumPolygons = mdata.VertexCount.Polys;
                 tempFedoraObject.NumTextures = mdata.ReferencedTextures.Length;
@@ -585,7 +615,64 @@ public partial class Users_Upload : Website.Pages.PageBase
         }
         return res;
     }
-    
+
+    public static Dictionary<String, Object> GetMetadataFromArchive(FileStream Fs)
+    {
+        Fs.Seek(0, SeekOrigin.Begin);
+        if(ZipFile.IsZipFile(Fs,false))
+        {
+            Fs.Seek(0, SeekOrigin.Begin);
+            ZipFile zip = ZipFile.Read(Fs);
+            foreach (ZipEntry z in zip)
+            {
+                if (Path.GetFileName(z.FileName).ToLower() == "metadata.xml" && !z.FileName.Contains("__MACOSX"))
+                {
+                    
+                    Dictionary<string, Object> technique = new Dictionary<string, object>();
+                    
+                    MemoryStream data = new MemoryStream();
+                    z.Extract(data);
+                    data.Seek(0, SeekOrigin.Begin);
+                    System.Xml.XmlReaderSettings settings = new System.Xml.XmlReaderSettings();
+                    settings.IgnoreComments = true;
+                    settings.IgnoreProcessingInstructions = true;
+                    settings.IgnoreWhitespace = true;
+                    settings.ProhibitDtd = true;
+                    System.Xml.XmlReader reader = System.Xml.XmlReader.Create(data, settings);
+
+                    string lastelement = "";
+                    while (reader.Read())
+                    {
+                        if (reader.NodeType == System.Xml.XmlNodeType.Element)
+                            lastelement = reader.Name;
+                        if (reader.NodeType == System.Xml.XmlNodeType.Text)
+                        {
+                            if (!technique.ContainsKey(lastelement))
+                                technique[lastelement] = reader.Value;
+                            else
+                            {
+                                object oldval = technique[lastelement];
+                                if (oldval.GetType() == typeof(ArrayList))
+                                    (oldval as ArrayList).Add(reader.Value);
+                                else
+                                {
+                                    ArrayList al = new ArrayList();
+                                    al.Add(oldval);
+                                    al.Add(reader.Value);
+                                    technique[lastelement] = al;
+
+                                }
+
+                            }
+                        }
+                    }
+                    return technique;
+                }
+               
+            }
+        }
+        return null;
+    }
     /// <summary>
     /// Binds the details from step 3 to the content object, sends it to Fedora, then adds the model and image datastreams.
     /// </summary>
@@ -725,9 +812,13 @@ public partial class Users_Upload : Website.Pages.PageBase
             tempCO.RightsHolder = "";
 
             Dictionary<String, Object> metadataroot = HttpContext.Current.Session["metadata"] as Dictionary<String, Object>;
+            tempCO.JSONMetadata = metadataroot;
             if (metadataroot != null)
             {
-                Dictionary<String, Object> metadata = metadataroot["ImmersiveEducationInitiative"] as Dictionary<String, Object>;
+                Dictionary<String, Object> metadata = null;
+                if(metadataroot.ContainsKey("ImmersiveEducationInitiative"))
+                    metadata = metadataroot["ImmersiveEducationInitiative"] as Dictionary<String, Object>;
+                
                 if (metadata != null)
                 {
                    
@@ -745,6 +836,12 @@ public partial class Users_Upload : Website.Pages.PageBase
 
                     if (metadata.ContainsKey("RIGHTSHOLDER"))
                         tempCO.RightsHolder = metadata["RIGHTSHOLDER"].ToString();
+
+                    if (metadata.ContainsKey("TITLE"))
+                        tempCO.Title = metadata["TITLE"].ToString();
+
+                    if (metadata.ContainsKey("DESCRIPTION"))
+                        tempCO.Description = metadata["DESCRIPTION"].ToString();
 
                     DateTime tempdate;
                     if (metadata.ContainsKey("DATE_COPYRIGHT"))
@@ -771,6 +868,20 @@ public partial class Users_Upload : Website.Pages.PageBase
                     if (metadata.ContainsKey("CREATOR"))
                     {
                         tempCO.DeveloperName = ArrayOrStringToString(metadata["CREATOR"]);
+                    }
+                    if (metadata.ContainsKey("KEYWORDS"))
+                    { 
+                        string[] Keywords = metadata["KEYWORDS"].ToString().Split(new char[] {','});
+                        for (int i = 0; i < Keywords.Length; i++)
+                            Keywords[i] = Keywords[i].Trim();
+                        tempCO.Keywords = String.Join(",", Keywords);
+
+
+                        
+                    }
+                    if (metadata.ContainsKey("LICENSE"))
+                    {
+                        tempCO.CreativeCommonsLicenseURL = metadata["LICENSE"].ToString();  
                     }
 
                 }

@@ -156,38 +156,42 @@
                                         IED Metadata</div>
                                 </div>
                                 <table border="0" style="margin-left: 5px;">
-                                    <tr runat="server" id="Tr2">
+                                        <tr runat="server" id="Tr2">
                                         <td>
-                                            Community URL:
+                                            Community URL:</td><td>
                                             <asp:HyperLink ID="Community_URL" runat="server" />
                                         </td></tr>
                                         <tr runat="server" id="Tr1"><td>
-                                            Certification URL:
+                                            Certification URL:</td><td>
                                             <asp:HyperLink ID="Certification_URL" runat="server" />
                                         </td></tr>
                                         <tr runat="server" id="Tr3"><td>
-                                            Contributor URL:
+                                            Contributor URL:</td><td>
                                             <asp:HyperLink ID="Contributor_URL" runat="server" />
                                         </td></tr>
                                         <tr runat="server" id="Tr4"><td>
-                                            Copyright:
+                                            Copyright:</td><td>
                                             <asp:Label ID="Copyright" runat="server" />
                                         </td></tr>
                                         <tr runat="server" id="Tr5"><td>
-                                            Rights Holder:
+                                            Rights Holder:</td><td>
                                             <asp:Label ID="Rights_Holder" runat="server" />
                                         </td></tr>
                                         <tr runat="server" id="Tr6"><td>
-                                            Certification Date:
+                                            Certification Date:</td><td>
                                             <asp:Label ID="Certification_Date" runat="server" />
                                         </td></tr>
                                         <tr runat="server" id="Tr7"><td>
-                                            Copyright Date:
+                                            Copyright Date:</td><td>
                                             <asp:Label ID="Copyright_Date" runat="server" />
                                         </td></tr>
                                         <tr runat="server" id="Tr8"><td>
-                                            Modification Date:
+                                            Modification Date:</td><td>
                                             <asp:Label ID="Modification_Date" runat="server" />
+                                        </td></tr>
+                                        <tr runat="server" id="Tr9"><td>
+                                            Hash Code</td><td>
+                                            <asp:Label ID="HashCode" runat="server" />
                                         </td>
                                     </tr>
                                 </table>
@@ -212,7 +216,7 @@
                                     </tr>
                                     <tr runat="server" id="DeveloperRow">
                                         <td>
-                                            Developer Name:
+                                            Creator Name:
                                             <asp:HyperLink ID="DeveloperNameHyperLink" runat="server" NavigateUrl="#" CssClass="Hyperlink">[DeveloperNameHyperLink]</asp:HyperLink>
                                         </td>
                                     </tr>

@@ -131,6 +131,7 @@ namespace Utils
         /// <summary>
         /// 
         /// </summary>
+        public Dictionary<string, Object> Metadata { get; set; }
         public string pid { get; set; }
         /// <summary>
         /// 

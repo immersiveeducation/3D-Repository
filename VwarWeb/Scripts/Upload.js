@@ -357,6 +357,14 @@ function convertModel(filename) {
     $('#conversionStep').show();
     $('#conversionStatus').html("Preparing Model for Viewing");
     $('#conversionIcon').attr("src", loadingLocation);
+
+    $('#ArtistName').attr("disabled", "disabled");
+    $('#DeveloperName').attr("disabled", "disabled");
+    
+    $('#LicenseType').attr("disabled", "disabled");
+    $('#ctl00_ContentPlaceHolder1_Upload1_TagsInput').attr("disabled", "disabled");
+    $('#ctl00_ContentPlaceHolder1_Upload1_TitleInput').attr("disabled", "disabled");
+
     $.ajax({
         url: "Upload.aspx/Convert",
         type: "POST",
@@ -367,6 +375,33 @@ function convertModel(filename) {
             if (!cancelled) {
                 $('#CancelButton').hide(); //We should hide it either way b/c this is the last step
                 MODE = object.d.type;
+                var metadata = object.d.Metadata;
+                //populate fields from data send down from server
+                if (metadata) {
+                    $('#ctl00_ContentPlaceHolder1_Upload1_TitleInput').val(metadata.ImmersiveEducationInitiative.TITLE);
+                    $('#ctl00_ContentPlaceHolder1_Upload1_TagsInput').val(metadata.ImmersiveEducationInitiative.KEYWORDS);
+
+                    for (var ij = 0; ij < metadata.ImmersiveEducationInitiative.ARTIST.length; ij++)
+                        $('#ArtistName').val($('#ArtistName').val() + ", " + metadata.ImmersiveEducationInitiative.ARTIST[ij]);
+
+                    for (var ij = 0; ij < metadata.ImmersiveEducationInitiative.CREATOR.length; ij++)
+                        $('#DeveloperName').val($('#DeveloperName').val() + ", " + metadata.ImmersiveEducationInitiative.CREATOR[ij]);
+
+                    $('#ArtistName').val($('#ArtistName').val().substr(2));
+                    $('#DeveloperName').val($('#DeveloperName').val().substr(2));
+                    $('#LicenseType').val('.by-nc-nd');
+                    $('#DeveloperURL').val("");
+
+                } else {
+
+                    $('#ArtistName').removeAttr("disabled");
+                    $('#DeveloperName').removeAttr("disabled");
+                    $('#LicenseType').removeAttr("disabled");
+                    $('#ctl00_ContentPlaceHolder1_Upload1_TagsInput').removeAttr("disabled");
+                    $('#ctl00_ContentPlaceHolder1_Upload1_TitleInput').removeAttr("disabled");
+
+                }
+                
                 if (object.d.converted == "true") {
                     $('#conversionStatus').html("Model Ready for Viewer");
                     $('#conversionIcon').attr("src", checkLocation);

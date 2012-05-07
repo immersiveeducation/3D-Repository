@@ -204,7 +204,7 @@ namespace vwarDAL
         /// <summary>
         /// 
         /// </summary>
-
+        public Dictionary<String,Object> JSONMetadata { get { return _Metadata.JSONMetadata; } set { _Metadata.JSONMetadata = value; } }
         
         public string CertificationURL { get { return _Metadata.CertificationURL; } set { _Metadata.CertificationURL = value; } }
         public string ContributorsURL { get { return _Metadata.ContributorsURL; } set { _Metadata.ContributorsURL = value; } }

@@ -75,6 +75,9 @@ namespace vwarDAL
         /// <summary>
         /// 
         /// </summary>
+
+        public Dictionary<String, Object> JSONMetadata { get; set; }
+
         public string ScreenShot { get; set; }
         /// <summary>
         /// 

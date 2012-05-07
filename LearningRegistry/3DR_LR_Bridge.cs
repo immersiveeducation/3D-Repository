@@ -151,6 +151,8 @@ namespace LR
             doc.resource_locator = LR_Integration_APIBaseURL() + co.PID + "/Format/dae?ID=00-00-00";
 
             //The inline resource data is the contentobject
+            var backupdata = co.JSONMetadata;
+            co.JSONMetadata = null;
             doc.resource_data = co;
 
             //Set the scema to dublin core
@@ -164,7 +166,7 @@ namespace LR
 
             //sign the envelope 
             env.Sign(LR_Integration_KeyPassPhrase(),LR_Integration_KeyID(),LR_Integration_PublicKeyURL());
-            
+            co.JSONMetadata = backupdata;
             //Serialize and publish
             return env.Publish();
         }

@@ -139,6 +139,7 @@ call AddColumnUnlessExists('3dr', 'contentobjects', 'CommunityURL',         'var
 call AddColumnUnlessExists('3dr', 'contentobjects', 'Date_Copyright',         'datetime DEFAULT "0000-00-00 00:00:00"');
 call AddColumnUnlessExists('3dr', 'contentobjects', 'Date_Modification',         'datetime DEFAULT "0000-00-00 00:00:00"');
 call AddColumnUnlessExists('3dr', 'contentobjects', 'Date_Certification',         'datetime DEFAULT "0000-00-00 00:00:00"');
+call AddColumnUnlessExists('3dr', 'contentobjects', 'JSONMetadata',         'varchar(5000) NOT NULL DEFAULT ""');
 
   
   
@@ -1448,7 +1449,9 @@ newCommunityURL nvarchar(400),
 newDate_Copyright datetime,
 newDate_Modification datetime,
 newDate_Certification datetime,
-newRightsHolder nvarchar(400))
+newRightsHolder nvarchar(400),
+newJSONMetadata nvarchar(5000)
+)
 BEGIN
 INSERT INTO `ContentObjects` (pid,
 title,
@@ -1492,7 +1495,8 @@ CommunityURL,
 Date_Copyright,
 Date_Modification,
 Date_Certification,
-RightsHolder)
+RightsHolder,
+JSONMetadata)
 
 values (newpid,
 newtitle,
@@ -1534,7 +1538,8 @@ newCommunityURL,
 newDate_Copyright,
 newDate_Modification,
 newDate_Certification,
-newRightsHolder);
+newRightsHolder,
+newJSONMetadata);
 SELECT LAST_INSERT_ID();
 END $$
 /*!50003 SET SESSION SQL_MODE=@TEMP_SQL_MODE */  $$
@@ -1988,7 +1993,8 @@ newCommunityURL nvarchar(400),
 newDate_Copyright datetime,
 newDate_Modification datetime,
 newDate_Certification datetime,
-newRightsHolder nvarchar(400)
+newRightsHolder nvarchar(400),
+newJSONMetadata nvarchar(5000)
 )
 BEGIN
 UPDATE `ContentObjects`
@@ -2034,7 +2040,8 @@ CommunityURL = newCommunityURL,
 Date_Copyright = newDate_Copyright,
 Date_Modification = newDate_Modification,
 Date_Certification = newDate_Certification,
-RightsHolder = newRightsHolder
+RightsHolder = newRightsHolder,
+JSONMetadata = newJSONMetadata
 WHERE pid=newpid AND revision = newRevisionNumber;
 SELECT ID
 FROM ContentObjects

@@ -185,7 +185,7 @@ namespace vwarDAL
                 int id = 0;
                 using (var command = conn.CreateCommand())
                 {
-                    command.CommandText = "{CALL UpdateContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
+                    command.CommandText = "{CALL UpdateContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     var properties = co.GetType().GetProperties();
                     foreach (var prop in properties)
@@ -673,7 +673,7 @@ namespace vwarDAL
                 
                 using (var command = conn.CreateCommand())
                 {
-                    command.CommandText = "{CALL InsertContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
+                    command.CommandText = "{CALL InsertContentObject(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?); }";
                     command.CommandType = System.Data.CommandType.StoredProcedure;
                     var properties = co.GetType().GetProperties();
                     foreach (var prop in properties)
@@ -795,6 +795,15 @@ namespace vwarDAL
                 co.RightsHolder = resultSet["RightsHolder"].ToString();
                 co.CommunityURL = resultSet["CommunityURL"].ToString();
 
+                try
+                {
+                    System.Web.Script.Serialization.JavaScriptSerializer ser = new System.Web.Script.Serialization.JavaScriptSerializer();
+                    co.JSONMetadata = ser.Deserialize<Dictionary<string, object>>(resultSet["JSONMetadata"].ToString());
+                }
+                catch (Exception e)
+                {
+                    co.JSONMetadata = new Dictionary<string, object>();
+                }
                 if (DateTime.TryParse(resultSet["Date_Copyright"].ToString(), out temp))
                 {
                     co.Date_Copyright = temp;
@@ -954,6 +963,10 @@ namespace vwarDAL
             command.Parameters.AddWithValue("newDate_Modification", co.Date_Modification);
             command.Parameters.AddWithValue("newDate_Certification", co.Date_Certification);
             command.Parameters.AddWithValue("newRightsHolder", co.RightsHolder);
+
+            System.Web.Script.Serialization.JavaScriptSerializer ser = new System.Web.Script.Serialization.JavaScriptSerializer();
+            command.Parameters.AddWithValue("newJSONMetadata", ser.Serialize(co.JSONMetadata));
+
         }
         /// <summary>
         /// 

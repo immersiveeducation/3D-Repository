@@ -103,7 +103,7 @@ limitations under the License.
                         </ul>
                         
                     </div>
-                    <span style="text-align: left">Having trouble? Try using our <a href="Edit.aspx">classic uploader</a> instead.</span>
+                    
                 </div>
             </div>
             <div id="DetailsAndStatusPanel" class="PanelLayoutContainer" style="height: 315px;
@@ -239,15 +239,7 @@ limitations under the License.
                                 <asp:TextBox ID="TagsInput" runat="server" CssClass="Step1Input"></asp:TextBox>
                             </td>
                         </tr>
-                        <tr>
-                            <td align="right" valign="top">
-                                <asp:Label ID="PrivacySettingsLabel" runat="server" Text="Privacy Settings" />
-                            </td>
-                            <td align="left">
-                                <span id="PrivacyValueLabel">Default</span> 
-                                (<a id="PermissionsLink">Change</a>)
-                            </td>
-                        </tr>
+                        
                     </table>
                     
                 </div>
@@ -498,13 +490,14 @@ limitations under the License.
                             <label>
                                 License Type</label>
                             <select id="LicenseType">
+                                <option value=".by-nc-nd">Attribution-NonCommercial-NoDerivatives</option>
                                 <option value=".publicdomain">Public Domain</option>
                                 <option value=".by" >Attribution</option>
                                 <option value=".by-sa" selected="selected">Attribution-ShareAlike</option>
                                 <option value=".by-nd">Attribution-NoDerivatives</option>
                                 <option value=".by-nc">Attribution-NonCommercial</option>
                                 <option value=".by-nc-sa">Attribution-NonCommercial-ShareAlike</option>
-                                <option value=".by-nc-nd">Attribution-NonCommercial-NoDerivatives</option>
+                                
                             </select>
                             <div id="LicenseImageContainer">
                                 <a id="LicenseLink" href="http://creativecommons.org/licenses/by-sa/3.0/legalcode"  target="_blank">

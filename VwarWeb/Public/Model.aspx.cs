@@ -188,7 +188,7 @@ public partial class Public_Model : Website.Pages.PageBase
             if (LR_3DR_Bridge.LR_Integration_Enabled())
                 LR_3DR_Bridge.ModelViewed(co);
 
-            Community_URL.Text = co.CommunityURL.Substring(0,min(50,co.CommunityURL.Length)) + "...";
+            Community_URL.Text = co.CommunityURL.Substring(0, min(50, co.CommunityURL.Length)) + "...";
             Community_URL.NavigateUrl = co.CommunityURL;
             Certification_URL.Text = co.CertificationURL.Substring(0, min(50, co.CertificationURL.Length)) + "...";
             Certification_URL.NavigateUrl = co.CertificationURL;
@@ -199,7 +199,7 @@ public partial class Public_Model : Website.Pages.PageBase
             Certification_Date.Text = co.Date_Certification.ToString();
             Copyright_Date.Text = co.Date_Copyright.ToString();
             Modification_Date.Text = co.Date_Modification.ToString();
-
+            HashCode.Text = co.JSONMetadata["SHA1Hash"].ToString();
             DownloadButton.Enabled = Permission >= ModelPermissionLevel.Fetchable;
             DownloadButton.Visible = Permission >= ModelPermissionLevel.Fetchable;
             if ("Model".Equals(co.AssetType, StringComparison.InvariantCultureIgnoreCase) || true)
@@ -364,6 +364,7 @@ public partial class Public_Model : Website.Pages.PageBase
             {
                 switch (co.CreativeCommonsLicenseURL.ToLower().Trim())
                 {
+                    case "http://ImmersiveEducation.org/@/RocketWorld/license":
                     case "http://creativecommons.org/licenses/by-nc-sa/3.0/legalcode":
                         this.CCLHyperLink.ImageUrl = "http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png";
                         this.CCLHyperLink.ToolTip = "by-nc-sa";
